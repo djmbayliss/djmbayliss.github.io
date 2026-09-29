@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f7f7f4">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f7f7f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#202020" media="(prefers-color-scheme: dark)">
   <meta name="description" content="Daniel Bayliss | Mechanical Engineering Portfolio. Selected mechanical design, prototyping, automotive and mechatronics projects.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Daniel Bayliss | Mechanical Engineering Portfolio">
@@ -15,131 +17,99 @@
   <link rel="canonical" href="https://djmbayliss.github.io/">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
+  <script src="navigation.js" defer></script>
+  <script src="projects/text-alignment.js" defer></script>
   <title>Daniel Bayliss | Mechanical Engineering Portfolio</title>
+  <script src="project-menu.js" defer></script>
 </head>
-<body>
+<body class="home-page" id="top">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Daniel Bayliss, home">Daniel Bayliss<span class="brand-mark" aria-hidden="true">/</span></a>
-      <nav class="main-nav" aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <!-- Replace assets/Daniel-Bayliss-CV.pdf with Daniel's real CV before publication. -->
-        <a href="assets/Daniel-Bayliss-CV.pdf" download>CV</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <nav class="main-nav" aria-label="Primary navigation"><a href="#top">Home</a><a href="#about">About me</a><details class="nav-projects"><summary>Projects</summary><div class="nav-projects-options"><a href="projects/index.html">View all</a><a href="#projects">Featured</a></div></details><a href="#skills">Skills</a><a href="#cv">CV</a><a href="#contact">Contact</a></nav>
     </div>
   </header>
 
   <main id="main">
     <section class="hero container" aria-labelledby="hero-title">
       <div class="hero-main">
-        <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span>Mechanical engineering portfolio</p>
-        <h1 id="hero-title">Daniel<br>Bayliss<span class="accent-dot">.</span></h1>
+        <h1 id="hero-title"><a href="#top" aria-label="Daniel Bayliss — back to top">Daniel Bayliss</a></h1>
         <p class="hero-role">Mechanical Engineering Student</p>
         <!-- Edit this one sentence to reflect Daniel's actual focus. -->
         <p class="hero-intro">Mechanical design, prototyping and practical problem-solving across product, automotive and mechatronics projects.</p>
-        <div class="hero-actions">
-          <a class="button button-dark" href="#projects">View projects <span aria-hidden="true">↗</span></a>
-          <a class="button button-outline" href="assets/Daniel-Bayliss-CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
-        </div>
       </div>
-      <div class="hero-aside" aria-label="Portfolio focus">
-        <p class="aside-label">Work shown here</p>
-        <p>Mechanisms <span>01</span></p>
-        <p>CAD &amp; analysis <span>02</span></p>
-        <p>Built prototypes <span>03</span></p>
-        <p class="aside-note">Design decisions, technical evidence and finished hardware.</p>
+    </section>
+
+    <section class="section section-about" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div><h2 id="about-title">About me</h2></div>
+        <div class="about-copy">
+          <p>I'm a mechanical engineering student interested in turning an idea into a working mechanism: modelling it, making it, testing it and improving the next iteration.</p>
+          <section class="education" aria-labelledby="education-title">
+            <h3 id="education-title">Education</h3>
+            <div class="education-entry">
+              <h4>Bachelor of Engineering (Honours), Mechanical Engineering</h4>
+              <p>Monash University, Clayton</p>
+              <p class="education-dates">2025–Present · Expected graduation: November 2027</p>
+            </div>
+            <div class="education-entry">
+              <h4>Engineering studies, Bachelor of Engineering (Mechanical Engineering) (Honours)</h4>
+              <p>RMIT University</p>
+              <p class="education-dates">2022–2024 · Transferred to Monash University</p>
+            </div>
+          </section>
+          <dl class="about-facts">
+            <div><dt>Interests</dt><dd>Mechanical design / Product development / Automotive &amp; motorsport</dd></div>
+          </dl>
+        </div>
       </div>
     </section>
 
     <section class="section section-projects" id="projects" aria-labelledby="projects-title">
       <div class="container">
         <div class="section-heading">
-          <div>
-            <p class="section-label">01 / Selected work</p>
-            <h2 id="projects-title">Engineering projects</h2>
-          </div>
-          <p class="section-summary">Mechanisms, analysis and hands-on builds. Open a project for its design process and evidence.</p>
+          <div><h2 id="projects-title">Projects</h2></div>
+          <a class="button button-outline" href="projects/index.html">View all <span aria-hidden="true">↗</span></a>
         </div>
-
-        <!-- FEATURED PROJECTS: copy a card to add another. The image paths are listed in README.md. -->
-        <div class="project-grid">
-          <article class="project-card project-card-wide">
-            <a class="project-image" href="projects/motorcycle-phone-mount.html" aria-label="View Motorcycle Phone Mount case study">
+        <!-- FEATURED PROJECTS: four image-led tiles; update links, images and one-sentence descriptions here. -->
+        <div class="featured-projects">
+<a class="project-card featured-project" href="projects/motorcycle-phone-mount.html?from=featured" aria-label="View Motorcycle Phone Mount project">
+            <div class="project-image">
               <img src="images/projects/motorcycle-phone-mount.svg" alt="Placeholder illustration; replace with a CAD render or photograph of the motorcycle phone mount" width="1600" height="1000">
-              <span class="image-corner" aria-hidden="true">01 / Product design</span>
-            </a>
-            <div class="project-card-body">
-              <div class="card-topline"><span>Featured project</span><span>01</span></div>
-              <h3><a href="projects/motorcycle-phone-mount.html">Motorcycle Phone Mount <span aria-hidden="true">↗</span></a></h3>
-              <p>Low-profile, fully 3D-printable mount exploring a quick-release mechanism and compliant springs.</p>
-              <ul class="tag-list" aria-label="Disciplines and tools"><li>CAD</li><li>Prototyping</li><li>ANSYS</li></ul>
-              <a class="project-cta" href="projects/motorcycle-phone-mount.html">View project <span aria-hidden="true">↗</span></a>
             </div>
-          </article>
-          <article class="project-card project-card-narrow">
-            <a class="project-image" href="projects/automated-window-blinds.html" aria-label="View Automated Window Blinds case study">
+            <div class="project-card-body">
+              <h3>Motorcycle Phone Mount <span class="featured-label">Featured</span></h3>
+              <p>A 3D-printable motorcycle phone mount with quick release and compliant springs.</p>
+            </div>
+          </a>
+<a class="project-card featured-project" href="projects/automated-window-blinds.html?from=featured" aria-label="View Automated Window Blinds project">
+            <div class="project-image">
               <img src="images/projects/automated-window-blinds.svg" alt="Placeholder illustration; replace with a photograph of the automated window blinds and mechanism" width="1600" height="1000" loading="lazy">
-              <span class="image-corner" aria-hidden="true">02 / Mechatronics</span>
-            </a>
-            <div class="project-card-body">
-              <div class="card-topline"><span>Featured project</span><span>02</span></div>
-              <h3><a href="projects/automated-window-blinds.html">Automated Window Blinds <span aria-hidden="true">↗</span></a></h3>
-              <p>ESP8266 blind system with CAD-designed parts, 3D printing and repurposed printer hardware.</p>
-              <ul class="tag-list" aria-label="Disciplines and tools"><li>CAD</li><li>3D printing</li><li>ESP8266</li></ul>
-              <a class="project-cta" href="projects/automated-window-blinds.html">View project <span aria-hidden="true">↗</span></a>
             </div>
-          </article>
-          <article class="project-card project-card-half">
-            <a class="project-image" href="projects/animatronic-film-prop.html" aria-label="View Animatronic Film Prop case study">
+            <div class="project-card-body">
+              <h3>Automated Window Blinds <span class="featured-label">Featured</span></h3>
+              <p>Automated blinds combining ESP8266 control, printed parts and repurposed hardware.</p>
+            </div>
+          </a>
+<a class="project-card featured-project" href="projects/animatronic-film-prop.html?from=featured" aria-label="View Animatronic Film Prop project">
+            <div class="project-image">
               <img src="images/projects/animatronic-film-prop.svg" alt="Placeholder illustration; replace with a photograph of the animatronic bird prop or its wing mechanism" width="1600" height="1000" loading="lazy">
-              <span class="image-corner" aria-hidden="true">03 / Mechanisms</span>
-            </a>
-            <div class="project-card-body">
-              <div class="card-topline"><span>Featured project</span><span>03</span></div>
-              <h3><a href="projects/animatronic-film-prop.html">Animatronic Film Prop <span aria-hidden="true">↗</span></a></h3>
-              <p>Servo-driven baby bird prop with a twitching wing linkage, Arduino control and practical fabrication.</p>
-              <ul class="tag-list" aria-label="Disciplines and tools"><li>Linkages</li><li>Arduino</li><li>Fabrication</li></ul>
-              <a class="project-cta" href="projects/animatronic-film-prop.html">View project <span aria-hidden="true">↗</span></a>
             </div>
-          </article>
-          <article class="project-card project-card-half">
-            <a class="project-image" href="projects/rc-vehicle-engineering.html" aria-label="View RC Vehicle Engineering case study">
-              <img src="images/projects/rc-vehicle-engineering.svg" alt="Placeholder illustration; replace with a photograph of a modified RC vehicle or custom component" width="1600" height="1000" loading="lazy">
-              <span class="image-corner" aria-hidden="true">04 / Automotive</span>
-            </a>
             <div class="project-card-body">
-              <div class="card-topline"><span>Featured project</span><span>04</span></div>
-              <h3><a href="projects/rc-vehicle-engineering.html">RC Vehicle Engineering <span aria-hidden="true">↗</span></a></h3>
-              <p>Custom parts, suspension and drivetrain modifications, repair and mechanical troubleshooting.</p>
-              <ul class="tag-list" aria-label="Disciplines and tools"><li>CAD</li><li>3D printing</li><li>Troubleshooting</li></ul>
-              <a class="project-cta" href="projects/rc-vehicle-engineering.html">View project <span aria-hidden="true">↗</span></a>
+              <h3>Animatronic Film Prop <span class="featured-label">Featured</span></h3>
+              <p>A servo-driven bird prop with a wing linkage and Arduino control.</p>
             </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-builds" aria-labelledby="builds-title">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="section-label">02 / Workshop notes</p>
-            <h2 id="builds-title">Other projects &amp; builds</h2>
-          </div>
-          <p class="section-summary">A place for smaller builds, repairs and experiments. Replace each prompt with a photograph and a specific result.</p>
-        </div>
-        <!-- SMALL BUILDS: edit these six items; duplicate an <article> for more. Replace the shared placeholder src with images/other/your-file.webp. -->
-        <div class="build-grid">
-          <article class="build-card"><img src="images/other/build-placeholder.svg" alt="Placeholder; add an image of the replacement automotive linkage" width="480" height="320" loading="lazy"><div><span class="build-type">Reverse engineering</span><h3>Automotive linkage</h3><p>[ADD WHAT FAILED, HOW THE REPLACEMENT WAS MADE, AND A PHOTO.]</p></div></article>
-          <article class="build-card"><img src="images/other/build-placeholder.svg" alt="Placeholder; add an image of the custom automotive cupholder" width="480" height="320" loading="lazy"><div><span class="build-type">Product design</span><h3>Custom cupholder</h3><p>[ADD FIT CONSTRAINTS, CAD OR PRINT DETAIL, AND A FINISHED PHOTO.]</p></div></article>
-          <article class="build-card"><img src="images/other/build-placeholder.svg" alt="Placeholder; add an image of the vehicle headlight mechanism" width="480" height="320" loading="lazy"><div><span class="build-type">Mechanism</span><h3>Headlight mechanism</h3><p>[ADD THE MECHANICAL PROBLEM, YOUR SOLUTION, AND EVIDENCE.]</p></div></article>
-          <article class="build-card"><img src="images/other/build-placeholder.svg" alt="Placeholder; add a motorcycle repair or fabrication photograph" width="480" height="320" loading="lazy"><div><span class="build-type">Hands-on work</span><h3>Motorcycle repair</h3><p>[ADD A SPECIFIC REPAIR OR FABRICATION TASK AND ITS RESULT.]</p></div></article>
-          <article class="build-card"><img src="images/other/build-placeholder.svg" alt="Placeholder; add an image of a CAD or 3D-printed component" width="480" height="320" loading="lazy"><div><span class="build-type">Rapid prototyping</span><h3>CAD &amp; printed parts</h3><p>[ADD A SMALL COMPONENT, DESIGN DECISION, AND PHOTO.]</p></div></article>
-          <article class="build-card"><img src="images/other/build-placeholder.svg" alt="Placeholder; add an image of an electronics or mechatronics build" width="480" height="320" loading="lazy"><div><span class="build-type">Mechatronics</span><h3>Electronics builds</h3><p>[ADD A BUILD, THE MECHANICAL INTERFACE, AND EVIDENCE.]</p></div></article>
+          </a>
+<a class="project-card featured-project" href="projects/traxxas-4-tec.html?from=featured" aria-label="View Traxxas 4-Tec 2.0 High-Speed Build project">
+            <div class="project-image">
+              <img src="images/shared/final-placeholder.svg" alt="Placeholder illustration; replace with a photograph of a modified RC vehicle or custom component" width="1600" height="1000" loading="lazy">
+            </div>
+            <div class="project-card-body">
+              <h3>Traxxas 4-Tec 2.0 High-Speed Build <span class="featured-label">Featured</span></h3>
+              <p>A high-speed RC build based on the Traxxas 4-Tec 2.0.</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -147,42 +117,36 @@
     <section class="section section-skills" id="skills" aria-labelledby="skills-title">
       <div class="container">
         <div class="section-heading">
-          <div><p class="section-label">03 / Technical toolkit</p><h2 id="skills-title">Skills &amp; tools</h2></div>
+          <div><h2 id="skills-title">Skills &amp; tools</h2></div>
           <p class="section-summary">Edit this list to include only tools Daniel has actually used. Project pages should show where each was applied.</p>
         </div>
         <div class="skills-grid">
-          <div class="skill-group"><span class="skill-number">01</span><h3>CAD &amp; design</h3><ul><li>Onshape</li><li>SolidWorks</li><li>Mechanical design</li><li>Design for additive manufacturing</li></ul></div>
-          <div class="skill-group"><span class="skill-number">02</span><h3>Analysis</h3><ul><li>ANSYS</li><li>FEA</li><li>CFD</li><li>Engineering calculations</li></ul></div>
-          <div class="skill-group"><span class="skill-number">03</span><h3>Prototyping &amp; manufacture</h3><ul><li>FDM 3D printing</li><li>Fabrication &amp; assembly</li><li>Prototyping</li><li>Mechanical troubleshooting</li></ul></div>
-          <div class="skill-group"><span class="skill-number">04</span><h3>Electronics &amp; programming</h3><ul><li>Arduino</li><li>ESP8266 / ESP32</li><li>MATLAB</li><li>Python</li></ul></div>
+          <div class="skill-group"><h3>CAD &amp; design</h3><ul><li>Onshape</li><li>SolidWorks</li><li>Mechanical design</li><li>Design for additive manufacturing</li></ul></div>
+          <div class="skill-group"><h3>Analysis</h3><ul><li>ANSYS</li><li>FEA</li><li>CFD</li><li>Engineering calculations</li></ul></div>
+          <div class="skill-group"><h3>Prototyping &amp; manufacture</h3><ul><li>FDM 3D printing</li><li>Fabrication &amp; assembly</li><li>Prototyping</li><li>Mechanical troubleshooting</li></ul></div>
+          <div class="skill-group"><h3>Electronics &amp; programming</h3><ul><li>Arduino</li><li>ESP8266 / ESP32</li><li>MATLAB</li><li>Python</li></ul></div>
         </div>
       </div>
     </section>
 
-    <section class="section section-about" id="about" aria-labelledby="about-title">
+    <section class="section section-cv" id="cv" aria-labelledby="cv-title">
       <div class="container about-grid">
-        <div><p class="section-label">04 / About</p><h2 id="about-title">About Daniel.</h2></div>
+        <div><h2 id="cv-title">CV</h2></div>
         <div class="about-copy">
-          <p>I'm a mechanical engineering student interested in turning an idea into a working mechanism: modelling it, making it, testing it and improving the next iteration.</p>
-          <p>[ADD UNIVERSITY, COURSE, YEAR OF STUDY AND 1–2 SPECIFIC LINES ABOUT HANDS-ON OR AUTOMOTIVE EXPERIENCE.]</p>
-          <dl class="about-facts">
-            <div><dt>University</dt><dd>[ADD UNIVERSITY]</dd></div>
-            <div><dt>Course</dt><dd>[ADD COURSE AND YEAR]</dd></div>
-            <div><dt>Interests</dt><dd>Mechanical design / Product development / Automotive &amp; motorsport</dd></div>
-          </dl>
+          <p>My education, experience and technical skills in one place.</p>
+          <!-- Replace assets/Daniel-Bayliss-CV.pdf with the real CV before publication. -->
+          <p class="cv-note">The current PDF is a placeholder. My full CV will be added soon.</p>
+          <a class="button button-dark" href="assets/Daniel-Bayliss-CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
         </div>
       </div>
     </section>
 
     <section class="section section-contact" id="contact" aria-labelledby="contact-title">
       <div class="container contact-grid">
-        <div><p class="section-label">05 / Contact</p><h2 id="contact-title">Let's talk engineering<span class="accent-dot">.</span></h2><p>For internships, vacation programs and undergraduate engineering opportunities.</p></div>
+        <div><h2 id="contact-title">Contact Me</h2><p>For internships, vacation programs and undergraduate engineering opportunities.</p></div>
         <div class="contact-list">
-          <!-- Replace each [ADD ...] span with a real anchor. Examples are in README.md. Do not publish fake contact links. -->
-          <div><span>Email</span><span>[ADD EMAIL ADDRESS]</span></div>
-          <div><span>LinkedIn</span><span>[ADD PROFILE URL]</span></div>
-          <div><span>GitHub</span><span>[ADD PROFILE URL]</span></div>
-          <div><span>CV</span><a href="assets/Daniel-Bayliss-CV.pdf" download>Download PDF <span aria-hidden="true">↓</span></a></div>
+          <div><span>Email</span><a href="mailto:djmbayliss@gmail.com">djmbayliss@gmail.com</a></div>
+          <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/djmbayliss">www.linkedin.com/in/djmbayliss</a></div>
         </div>
       </div>
     </section>

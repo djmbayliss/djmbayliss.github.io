@@ -11,7 +11,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#f7f7f4">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f7f7f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#202020" media="(prefers-color-scheme: dark)">
   <meta name="description" content="[ADD ONE-LINE ENGINEERING SUMMARY: WHAT YOU DESIGNED, BUILT OR ANALYSED.]">
   <meta property="og:type" content="article">
   <meta property="og:title" content="[ADD PROJECT TITLE] | Daniel Bayliss — Mechanical Engineering Portfolio">
@@ -23,17 +25,19 @@
   <link rel="canonical" href="https://djmbayliss.github.io/projects/new-project.html">
   <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../style.css">
+  <script src="../project-back.js" defer></script>
   <title>[ADD PROJECT TITLE] | Daniel Bayliss — Mechanical Engineering Portfolio</title>
+  <script src="../project-menu.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header"><div class="container header-inner">
     <a class="brand" href="../index.html" aria-label="Daniel Bayliss, home">Daniel Bayliss<span class="brand-mark" aria-hidden="true">/</span></a>
-    <nav class="main-nav" aria-label="Primary navigation"><a href="../index.html#projects">Projects</a><a href="../index.html#about">About</a><a href="../index.html#skills">Skills</a><a href="../assets/Daniel-Bayliss-CV.pdf" download>CV</a><a href="../index.html#contact">Contact</a></nav>
+    <nav class="main-nav" aria-label="Primary navigation"><a href="../index.html#top">Home</a><a href="../index.html#about">About me</a><details class="nav-projects"><summary>Projects</summary><div class="nav-projects-options"><a href="index.html">View all</a><a href="../index.html#projects">Featured</a></div></details><a href="../index.html#skills">Skills</a><a href="../index.html#cv">CV</a><a href="../index.html#contact">Contact</a></nav>
   </div></header>
   <main id="main">
     <div class="container case-hero">
-      <a class="back-link" href="../index.html#projects"><span aria-hidden="true">←</span> All projects</a>
+      <a class="back-link" href="index.html#all"><span aria-hidden="true">←</span> All projects</a>
       <p class="case-kicker">05 / [ADD DISCIPLINE]</p>
       <h1>[ADD PROJECT TITLE]<span class="accent-dot">.</span></h1>
       <p class="case-lead">[ADD ONE-LINE ENGINEERING SUMMARY: WHAT YOU DESIGNED, BUILT OR ANALYSED.]</p>
@@ -42,6 +46,8 @@
         <div><dt>Project type</dt><dd>[ADD PERSONAL / TEAM]</dd></div>
         <div><dt>My role</dt><dd>[ADD YOUR SCOPE]</dd></div>
         <div><dt>Tools</dt><dd>[ADD VERIFIED TOOLS]</dd></div>
+        <!-- Completion date: replace the prompt with the date the project was finished, not uploaded. Also set data-completed on its directory card. -->
+        <div><dt>Completed</dt><dd>[ADD COMPLETION DATE]</dd></div>
         <div><dt>Status / year</dt><dd>[ADD STATUS / YEAR]</dd></div>
       </dl>
       <figure class="case-hero-figure">
@@ -113,12 +119,12 @@
 <section class="case-section" id="contribution" aria-labelledby="contribution-title"><h2 id="contribution-title">My contribution</h2><p>[ADD YOUR PERSONAL RESPONSIBILITY. FOR TEAM WORK, SEPARATE YOUR WORK FROM OTHERS.]</p></section>
 <section class="case-section" id="tools" aria-labelledby="tools-title"><h2 id="tools-title">Tools &amp; skills</h2><ul class="tag-list" aria-label="Tools and skills"><li>[ADD TOOL]</li><li>[ADD METHOD]</li><li>[ADD MATERIAL]</li></ul></section>
         <nav class="case-pagination" aria-label="Other projects">
-          <a href="../index.html#projects"><span class="case-nav-label">← Previous project</span><strong>RC Vehicle Engineering</strong></a>
-          <a href="../index.html#projects"><span class="case-nav-label">Next project →</span><strong>Automated Window Blinds</strong></a>
+          <a href="index.html#all"><span class="case-nav-label">← Previous project</span><strong>Traxxas 4-Tec 2.0 High-Speed Build</strong></a>
+          <a href="index.html#all"><span class="case-nav-label">Next project →</span><strong>Automated Window Blinds</strong></a>
         </nav>
       </article>
     </div>
   </main>
-  <footer class="site-footer case-footer"><div class="container footer-inner"><span>Daniel Bayliss / Mechanical Engineering</span><span>Design / Analysis / Prototyping</span><a href="../index.html#contact">Contact / CV ↗</a></div></footer>
+  <footer class="site-footer case-footer"><div class="container footer-inner"><span>Daniel Bayliss / Mechanical Engineering</span><span>Design / Analysis / Prototyping</span><a href="../index.html#contact">Contact ↗</a></div></footer>
 </body>
 </html>
