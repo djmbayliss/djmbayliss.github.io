@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-labelledby="t d">
+<title id="t">Small build image placeholder</title><desc id="d">Replace with a genuine photograph or drawing of this build.</desc>
+<rect width="480" height="320" fill="#e9eeea"/><rect x="16" y="16" width="448" height="288" fill="none" stroke="#b9c6be"/>
+<path d="M36 245h408" stroke="#b9c6be"/><text x="36" y="143" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#314f48">ADD BUILD IMAGE</text>
+<text x="36" y="271" font-family="Arial,Helvetica,sans-serif" font-size="12" letter-spacing="2" fill="#52615a">PLACEHOLDER</text></svg>

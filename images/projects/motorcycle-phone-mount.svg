@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Motorcycle phone mount image placeholder</title>
+  <desc id="desc">Illustrative technical line drawing. Replace with a real CAD render or photograph of the finished motorcycle phone mount.</desc>
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#e1e3df" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <path fill="#f3f2ee" d="M0 0h1600v1000H0z"/>
+  <path fill="url(#grid)" d="M640 100h860v800H640z"/>
+  <g fill="none" stroke="#a6b1ac" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="850" y="168" width="330" height="570" rx="29"/>
+    <rect x="875" y="201" width="280" height="488" rx="8" stroke="#d1d8d3"/>
+    <circle cx="1015" cy="711" r="10"/>
+    <path d="M815 348h35m330 0h36M815 552h35m330 0h36M815 330v36m401-36v36M815 534v36m401-36v36" stroke="#74887e" stroke-width="8"/>
+    <path d="M837 440h-57v178h75m344-178h57v178h-75M935 738v68h160v-68M972 806v29m86-29v29"/>
+    <ellipse cx="1015" cy="859" rx="139" ry="30"/>
+    <ellipse cx="1015" cy="859" rx="70" ry="14"/>
+    <path d="M1015 130v644M743 453h540" stroke="#d1d8d3" stroke-width="1.5" stroke-dasharray="10 12"/>
+  </g>
+  <path d="M80 80h1440M80 920h1440" stroke="#c4cbc6" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#29312e">
+    <text x="82" y="120" font-size="20" letter-spacing="5" fill="#637a6e">PROJECT IMAGE / 01</text>
+    <text x="81" y="361" font-size="49" font-weight="700">Motorcycle</text>
+    <text x="81" y="420" font-size="49" font-weight="700">phone mount</text>
+    <text x="82" y="498" font-size="25" letter-spacing="3" fill="#66756e">IMAGE PLACEHOLDER</text>
+    <text x="82" y="549" font-size="20" fill="#64716a">Replace with a CAD render or finished prototype.</text>
+    <text x="82" y="876" font-size="17" fill="#7a8580">ILLUSTRATIVE ARTWORK · NOT A PROJECT IMAGE</text>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="t d">
+<title id="t">PROTOTYPE image placeholder</title><desc id="d">Replace with a real fabrication or assembly photo. This is a placeholder, not project evidence.</desc>
+<rect width="1600" height="1000" fill="#edf0ed"/>
+<rect x="52" y="52" width="1496" height="896" fill="none" stroke="#b8c3bd" stroke-width="2"/>
+<path d="M52 155h1496M52 845h1496" stroke="#c5cec9" stroke-width="2"/>
+<path d="M112 230v540M1488 230v540" stroke="#d5ded8" stroke-width="1"/>
+<path d="M112 230h38M112 770h38M1450 230h38M1450 770h38" stroke="#b8c3bd" stroke-width="2"/>
+<text x="112" y="116" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" letter-spacing="4" fill="#37645f">IMAGE PLACEHOLDER</text>
+<text x="112" y="465" font-family="Arial,Helvetica,sans-serif" font-size="82" font-weight="700" letter-spacing="-4" fill="#26312d">PROTOTYPE</text>
+<text x="112" y="535" font-family="Arial,Helvetica,sans-serif" font-size="29" fill="#52615a">Replace with a real fabrication or assembly photo</text>
+<text x="112" y="905" font-family="Arial,Helvetica,sans-serif" font-size="19" letter-spacing="2" fill="#52615a">NOT PROJECT EVIDENCE — REPLACE BEFORE PUBLISHING</text>
+</svg>

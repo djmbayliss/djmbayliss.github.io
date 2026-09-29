@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Animatronic film prop image placeholder</title>
+  <desc id="desc">Illustrative technical line drawing. Replace with a real photograph showing the animatronic prop or its mechanism.</desc>
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#e1e3df" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <path fill="#f3f2ee" d="M0 0h1600v1000H0z"/>
+  <path fill="url(#grid)" d="M640 100h860v800H640z"/>
+  <g fill="none" stroke="#a6b1ac" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M878 516c0-122 104-204 241-187 132 16 194 116 177 224-15 100-104 165-220 165-123 0-198-75-198-202Z"/>
+    <path d="M1056 356c-16-64 14-110 65-118 46-7 84 17 101 55M1218 297l89 38-80 29"/>
+    <circle cx="1173" cy="302" r="6" fill="#74887e"/>
+    <path d="M1091 521c-111-76-240-61-323-153 36 142 122 242 285 228" stroke="#74887e" stroke-width="5"/>
+    <path d="M1060 548 904 439m154 109-229-90m224 89-183 13" stroke="#c1cbc5"/>
+    <circle cx="1059" cy="548" r="14" fill="#f3f2ee" stroke="#74887e"/>
+    <circle cx="904" cy="439" r="10" fill="#f3f2ee" stroke="#74887e"/>
+    <path d="M1080 715v73m55-72v72m-99 0h90m-35 0h87M918 766h364M1015 188v604" stroke="#d1d8d3" stroke-width="1.5" stroke-dasharray="10 12"/>
+  </g>
+  <path d="M80 80h1440M80 920h1440" stroke="#c4cbc6" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#29312e">
+    <text x="82" y="120" font-size="20" letter-spacing="5" fill="#637a6e">PROJECT IMAGE / 03</text>
+    <text x="81" y="361" font-size="49" font-weight="700">Animatronic</text>
+    <text x="81" y="420" font-size="49" font-weight="700">film prop</text>
+    <text x="82" y="498" font-size="25" letter-spacing="3" fill="#66756e">IMAGE PLACEHOLDER</text>
+    <text x="82" y="549" font-size="20" fill="#64716a">Replace with the prop or wing mechanism.</text>
+    <text x="82" y="876" font-size="17" fill="#7a8580">ILLUSTRATIVE ARTWORK · NOT A PROJECT IMAGE</text>
+  </g>
+</svg>

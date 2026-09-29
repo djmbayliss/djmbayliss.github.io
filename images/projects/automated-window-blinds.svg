@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Automated window blinds image placeholder</title>
+  <desc id="desc">Illustrative technical line drawing. Replace with a real photograph or CAD render of the automated blind system.</desc>
+  <defs>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#e1e3df" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <path fill="#f3f2ee" d="M0 0h1600v1000H0z"/>
+  <path fill="url(#grid)" d="M640 100h860v800H640z"/>
+  <g fill="none" stroke="#a6b1ac" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="755" y="210" width="635" height="560"/>
+    <path d="M775 259h595M775 320h595M775 381h595M775 442h595M775 503h595M775 564h595M775 625h595M775 686h595" stroke="#74887e" stroke-width="13"/>
+    <path d="M775 268l595 24M775 329l595 24M775 390l595 24M775 451l595 24M775 512l595 24M775 573l595 24M775 634l595 24M775 695l595 24" stroke="#c8d0cb" stroke-width="2"/>
+    <rect x="820" y="173" width="520" height="35" rx="5"/>
+    <circle cx="1364" cy="191" r="22"/>
+    <circle cx="1364" cy="191" r="10" stroke="#74887e"/>
+    <path d="M1364 213v80M755 790h635M1072 125v74" stroke="#d1d8d3" stroke-width="1.5" stroke-dasharray="10 12"/>
+  </g>
+  <path d="M80 80h1440M80 920h1440" stroke="#c4cbc6" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#29312e">
+    <text x="82" y="120" font-size="20" letter-spacing="5" fill="#637a6e">PROJECT IMAGE / 02</text>
+    <text x="81" y="361" font-size="49" font-weight="700">Automated</text>
+    <text x="81" y="420" font-size="49" font-weight="700">window blinds</text>
+    <text x="82" y="498" font-size="25" letter-spacing="3" fill="#66756e">IMAGE PLACEHOLDER</text>
+    <text x="82" y="549" font-size="20" fill="#64716a">Replace with the assembled system or CAD.</text>
+    <text x="82" y="876" font-size="17" fill="#7a8580">ILLUSTRATIVE ARTWORK · NOT A PROJECT IMAGE</text>
+  </g>
+</svg>
