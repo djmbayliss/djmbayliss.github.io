@@ -60,12 +60,12 @@
       const nav = header.querySelector('.main-nav a').getBoundingClientRect();
       const content = document.querySelector('main').getBoundingClientRect();
       name.style.left = `${compact ? (innerWidth - name.offsetWidth) / 2 : content.left}px`;
-      name.style.top = `${compact ? 9 : nav.top + nav.height / 2 - name.offsetHeight / 2}px`;
+      name.style.top = `${compact ? 21 : nav.top + nav.height / 2 - name.offsetHeight / 2}px`;
       if (directoryLabel) {
         header.style.setProperty('--nav-offset', compact ? '46px' : '0px');
         name.style.fontSize = compact ? '16px' : '22px';
         const navRect = header.querySelector('.main-nav a').getBoundingClientRect();
-        const labelBottom = compact ? 42 : navRect.top + navRect.height / 2 + 24.565 * 1.15 / 2;
+        const labelBottom = compact ? 54 : navRect.top + navRect.height / 2 + 24.565 * 1.15 / 2;
         directoryLabel.style.fontSize = compact ? '12px' : '14px';
         directoryLabel.style.lineHeight = compact ? '15px' : '18px';
         directoryLabel.style.top = (labelBottom - (compact ? 15 : 18)) + 'px';
@@ -104,7 +104,7 @@
     const rect = title.getBoundingClientRect();
     const font = getComputedStyle(title);
     const compact = innerWidth < 900;
-    let dockY = compact ? 9 : 12;
+    let dockY = compact ? 21 : 24;
     const startY = rect.top + scrollY;
     const distance = Math.max(1, startY - dockY);
     const progress = Math.min(1, Math.max(0, scrollY / distance));
@@ -121,7 +121,7 @@
     // Preserve the former name's lower edge for the section label.
     const oldNameHeight = name.offsetHeight * 24.565 / size;
     const labelHeight = compact ? 15 : 18;
-    const labelBottom = compact ? 42 : navText.top + navText.height / 2 + oldNameHeight / 2;
+    const labelBottom = compact ? 54 : navText.top + navText.height / 2 + oldNameHeight / 2;
     dockY = labelBottom - labelHeight - 2 - name.offsetHeight * scale;
     const labelY = labelBottom - labelHeight;
     sectionLabel.style.fontSize = compact ? '12px' : '14px';

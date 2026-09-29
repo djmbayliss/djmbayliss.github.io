@@ -359,11 +359,11 @@ body { font-size: 15px; line-height: 1.6; }
 html { scroll-padding-top: 130px; }
 .site-header {
   position: sticky;
-  top: 12px;
+  top: 24px;
   z-index: 50;
   width: fit-content;
   max-width: calc(100% - 32px);
-  margin: 16px auto 0;
+  margin: 32px auto 0;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 28px;
@@ -396,7 +396,7 @@ html { scroll-padding-top: 130px; }
   mask-image: linear-gradient(to bottom, #000 0%, #000 65%, transparent 100%);
 }
 :is(.home-page, .projects-page) .site-header {
-  top: calc(12px + var(--nav-offset, 0px));
+  top: calc(24px + var(--nav-offset, 0px));
   transform: scale(var(--nav-scale, 1));
   transform-origin: top center;
 }
