@@ -734,7 +734,7 @@ html { scroll-padding-top: 130px; }
 .projects-page main { margin-top: 32px; }
 .projects-page .directory-heading:has(.page-banner), .projects-page .case-hero:has(.page-banner) { padding-top: 0; }
 .page-banner { margin-top: 0; margin-bottom: 24px; }
-.site-header .main-nav { display: grid; gap: 4px; width: 100%; }
+.site-header .main-nav { display: grid; grid-template-columns: repeat(6, max-content); gap: 4px; width: 100%; }
 .site-header .main-nav > a, .site-header .nav-projects > summary { text-align: center; justify-content: center; }
 .site-header .nav-projects { min-width: 0; }
 .site-header .header-inner { width: 100%; }
@@ -749,3 +749,8 @@ html { scroll-padding-top: 130px; }
 .vehicle-title-row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 18px; }
 .projects-page .vehicle-title-row h1 { margin: 0; }
 .vehicle-entry-count { flex-shrink: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+
+/* Keep the navigation usable before its positioning script loads. */
+@media (max-width: 600px) {
+  .site-header .main-nav { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
