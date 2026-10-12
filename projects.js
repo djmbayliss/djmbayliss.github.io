@@ -11,11 +11,12 @@
   const entries = groups.flatMap(group => [...group.querySelectorAll('.project-card')].map(card => ({card, group, parent:card.parentElement})));
   const projects = entries.filter(({card}) => card.dataset.kind !== 'vehicle');
   const dropdowns = new Map();
-  let restoredOpen = [];
-  try { restoredOpen = JSON.parse(sessionStorage.getItem('portfolio-open-categories') || '[]'); } catch {}
-  const saveOpen = () => {
-    try { sessionStorage.setItem('portfolio-open-categories', JSON.stringify([...dropdowns].filter(([,details]) => details.open).map(([id]) => id))); } catch {}
-  };
+  let returnCategory = new URLSearchParams(location.search).get('return');
+  if (returnCategory) {
+    const clean = new URL(location.href);
+    clean.searchParams.delete('return');
+    history.replaceState(null, '', clean.pathname + clean.search + clean.hash);
+  }
   const filters = document.querySelector('.tag-filters');
   categories.before(filters);
   const empty = document.querySelector('.filter-empty');
@@ -45,8 +46,8 @@
 
   function dateOf(card) {
     const value = card.dataset.completed || '';
-    if (!/^\d{4}-\d{2}(-\d{2})?$/.test(value)) return null;
-    const date = new Date(`${value.length === 7 ? value + "-01" : value}T00:00:00Z`);
+    if (!/^\d{4}(-\d{2}(-\d{2})?)?$/.test(value)) return null;
+    const date = new Date(`${value.length === 4 ? value + "-01-01" : value.length === 7 ? value + "-01" : value}T00:00:00Z`);
     return Number.isFinite(date.getTime()) && date.toISOString().slice(0,value.length) === value ? date : null;
   }
   function setOrigin(card, origin) {
@@ -62,7 +63,7 @@
     if (date) {
       const time = document.createElement('time');
       time.dateTime = card.dataset.completed;
-      time.textContent = date.toLocaleDateString('en-AU', {...(card.dataset.completed.length === 10 ? {day:'numeric'} : {}),month:'short',year:'numeric',timeZone:'UTC'});
+      time.textContent = date.toLocaleDateString('en-AU', {...(card.dataset.completed.length === 10 ? {day:'numeric'} : {}),...(card.dataset.completed.length > 4 ? {month:'short'} : {}),year:'numeric',timeZone:'UTC'});
       label.append(time);
     }
   }
@@ -81,7 +82,7 @@
     oldCard.replaceWith(details);
     group.remove();
     dropdowns.set(details.id, details);
-    details.open = restoredOpen.includes(details.id);
+    details.open = false;
     let animation = null;
     let targetOpen = false;
     summary.addEventListener('click', event => {
@@ -102,7 +103,7 @@
       animation.onfinish = () => { details.open = targetOpen; animation = null; };
     });
     details.addEventListener('toggle', () => {
-      saveOpen();
+
       summary.querySelector('.project-cta').textContent = details.open ? 'Collapse' : 'Expand';
 
     });
@@ -138,7 +139,9 @@
         entry.parent.append(entry.card);
         setOrigin(entry.card, entry.group.id);
       }
-      const selected = dropdowns.get(location.hash.slice(1));
+      for (const details of dropdowns.values()) details.open = false;
+      const selected = dropdowns.get(returnCategory);
+      returnCategory = null;
       if (selected) {
         selected.open = true;
         requestAnimationFrame(() => selected.scrollIntoView({block: 'start', behavior: 'instant'}));

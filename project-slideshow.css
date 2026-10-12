@@ -1,0 +1,26 @@
+.project-title-date { display: inline-block; font-size: .65em; color: var(--muted); white-space: nowrap; letter-spacing: -.02em; }
+.project-slideshow { --slide-height: max(240px, min(62vh, 620px)); position: relative; max-width: 960px; margin-inline: auto; }
+.vehicle-page .case-section .project-slide { max-width: none; margin: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--soft); }
+.project-slide[hidden], .slideshow-controls[hidden] { display: none; }
+.slide-image { position: relative; overflow: hidden; background: var(--soft); }
+.slide-image video { display: block; width: 100%; height: var(--slide-height); object-fit: contain; }
+.vehicle-page .case-section .slide-image img { width: 100%; height: var(--slide-height); object-fit: contain; border-radius: 0; }
+.slide-caption-meta { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; margin-bottom: 8px; }
+.slide-date { justify-self: start; font-size: 16px; font-weight: 650; }
+.vehicle-page .case-section .project-slide figcaption { margin: 0; padding: 12px 18px; border-bottom: 1px solid var(--line); background: var(--soft); color: var(--ink); font-size: 16px; font-weight: 500; line-height: 1.6; }
+.slideshow-controls { position: absolute; inset: auto 1px 1px; height: var(--slide-height); pointer-events: none; }
+.slideshow-controls button { position: absolute; top: 50%; transform: translateY(-50%); min-height: 44px; padding: 10px 18px; border: 1px solid #0001; border-radius: 999px; font: inherit; color: #202725; background: rgba(255,255,255,.94); box-shadow: 0 2px 12px #0002; cursor: pointer; pointer-events: auto; }
+.slideshow-controls [data-previous] { left: 16px; }
+.slideshow-controls [data-next] { right: 16px; }
+.slideshow-controls button:hover:not(:disabled) { background: #fff; }
+.slideshow-controls button:disabled { opacity: .4; cursor: default; }
+.slideshow-controls button[data-previous], .slideshow-controls button[data-next] { width: 44px; height: 44px; padding: 0; font-size: 22px; line-height: 1; }
+.slideshow-controls button:focus-visible, .project-slideshow:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.slideshow-status { grid-column: 2; justify-self: center; color: var(--muted); font-size: 16px; font-weight: 650; font-variant-numeric: tabular-nums; }
+@media (max-width: 600px) {
+  .project-slideshow { --slide-height: 300px; }
+  .vehicle-page .case-section .project-slide figcaption { padding: 10px 14px; font-size: 14px; }
+  .slideshow-controls button { padding-inline: 13px; font-size: 14px; }
+  .slideshow-controls [data-previous] { left: 10px; }
+  .slideshow-controls [data-next] { right: 10px; }
+}
