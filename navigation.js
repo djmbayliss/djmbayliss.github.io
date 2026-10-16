@@ -53,7 +53,7 @@
     header.style.setProperty('--nav-offset', '0px');
     header.style.width = 'max-content';
     header.style.maxWidth = 'none';
-    menu.style.gridTemplateColumns = 'repeat(6, max-content)';
+    menu.style.gridTemplateColumns = 'repeat(' + menu.children.length + ', max-content)';
     const naturalWidth = header.offsetWidth;
     const columns = available >= 220 ? 3 : 2;
     if (naturalWidth > available) {
